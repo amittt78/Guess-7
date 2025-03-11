@@ -1,0 +1,47 @@
+*{
+	margin: 0px;
+}
+.hero{
+	height: 100vh;
+	background: #000;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mid{
+	height:306px;
+	width:300px;
+	background: #fff;
+	position:relative;
+
+}
+#ba{
+	position: absolute;
+	height:306px;
+	width:300px;
+	
+	z-index: 1;
+}
+.row{
+	display: flex;
+	justify-content: space-between;
+	
+
+	
+}
+.col{
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	background: red;
+	margin: 1px;
+	position: relative;
+}
+img{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	left:0;
+	
+}

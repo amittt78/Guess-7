@@ -1,0 +1,280 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width,initial-scale=1">
+	<link rel="stylesheet" href="b.css">
+</head>
+<body>
+	<div class="hero">
+		<div class="mid" id="mi" >
+			<div class="back" id="ba"></div>
+			<div class="row">
+				<div class="col" id="co1" onclick="h1()" >
+					<span id="text_1">0</span>
+					<img src="fn2.jpg" id="im1" >
+
+				</div>
+				<div class="col" id="co2" onclick="h2()">
+					<span id="text_2">0</span>
+					<img src="fn2.jpg" id="im2">
+				</div>
+				<div class="col" id="co3" onclick="h3()">
+					<span id="text_3">0</span>
+					<img src="fn2.jpg" id="im3">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col" id="co4" onclick="h4()">
+					<span id="text_4">0</span>
+					<img src="fn2.jpg" id="im4">
+				</div>
+				<div class="col" id="co5" onclick="h5()">
+					<span id="text_5">0</span>
+					<img src="fn2.jpg" id="im5">
+				</div>
+				<div class="col" id="co6" onclick="h6()">
+					<span id="text_6">0</span>
+					<img src="fn2.jpg" id="im6">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col" id="co7" onclick="h7()">
+					<span id="text_7">0</span>
+					<img src="fn2.jpg" id="im7">
+				</div>
+				<div class="col" id="co8" onclick="h8()">
+					<span id="text_8">0</span>
+					<img src="fn2.jpg" id="im8">
+				</div>
+				<div class="col" id="co9" onclick="h9()">
+					<span id="text_9">0</span>
+					<img src="fn2.jpg" id="im9">
+				</div>
+			</div>
+			
+             <span style="color:yellow;" id="im"></span>
+		</div>
+		<input type="text" id="in" placeholder="enter the amount">
+		<button id="st" onclick="loading()">START</button>
+		<button id="st1" onclick="reset()">RESET</button>
+	</div>
+	
+	<script>
+
+		let num=0;
+		let mo=0;
+		let ph="";
+		let x22=0;
+		document.getElementById("st1").disabled=true;
+		  
+
+
+		function loading(){
+			if(document.getElementById("in").value==""){
+				document.getElementById("im").innerHTML="Please enter amount";
+				return;
+			}
+			num=Math.floor((Math.random()*9)+1);
+			console.log(num);
+			document.getElementById("st").disabled="disabled";
+			document.getElementById("st1").disabled=false;
+			mo=document.getElementById("in").value*10;
+			document.getElementById("in").disabled=true;
+			document.getElementById("ba").style.zIndex="-1";
+
+
+			if(num==1){
+				document.getElementById("text_1").innerHTML="7";
+			}else if(num==2){
+				document.getElementById("text_2").innerHTML="7";
+			}else if(num==3){
+				document.getElementById("text_3").innerHTML="7";
+			}else if(num==4){
+				document.getElementById("text_4").innerHTML="7";
+			}else if(num==5){
+				document.getElementById("text_5").innerHTML="7";
+			}else if(num==6){
+				document.getElementById("text_6").innerHTML="7";
+			}else if(num==7){
+				document.getElementById("text_7").innerHTML="7";
+			}else if(num==8){
+				document.getElementById("text_8").innerHTML="7";
+			}else if(num==9){
+				document.getElementById("text_9").innerHTML="7";
+			}
+
+			document.getElementById("im1").src="testimonial-1.jpg";
+			document.getElementById("im2").src="testimonial-1.jpg";
+			document.getElementById("im3").src="testimonial-1.jpg";
+			document.getElementById("im4").src="testimonial-1.jpg";
+			document.getElementById("im5").src="testimonial-1.jpg";
+			document.getElementById("im6").src="testimonial-1.jpg";
+			document.getElementById("im7").src="testimonial-1.jpg";
+			document.getElementById("im8").src="testimonial-1.jpg";
+			document.getElementById("im9").src="testimonial-1.jpg";
+			 
+		}
+		function reset(){
+			document.getElementById("st1").disabled="disabled";
+			document.getElementById("st").disabled=false;
+			document.getElementById("in").disabled=false;
+			document.getElementById("in").value="";
+			document.getElementById(ph).style.display="initial";
+			document.getElementById(x22).innerHTML="0";
+			document.getElementById("im").innerHTML="";
+			
+			
+			document.getElementById("im1").src="fn2.jpg";
+			document.getElementById("im2").src="fn2.jpg";
+			document.getElementById("im3").src="fn2.jpg";
+			document.getElementById("im4").src="fn2.jpg";
+			document.getElementById("im5").src="fn2.jpg";
+			document.getElementById("im6").src="fn2.jpg";
+			document.getElementById("im7").src="fn2.jpg";
+			document.getElementById("im8").src="fn2.jpg";
+			document.getElementById("im9").src="fn2.jpg";
+
+           
+
+
+
+
+		}
+
+		function h1(){
+			document.getElementById("im1").style.display="none";
+			
+			if(document.getElementById("text_1").innerHTML!="0"){
+				document.getElementById("im").innerHTML="You Have won"+mo;
+			}else{
+				document.getElementById("im").innerHTML="Try Again";
+
+			}
+			document.getElementById("ba").style.zIndex="1";
+			ph="im1";
+			x22="text_1";
+		
+		}
+
+		function h2(){
+			ph="im2";
+			x22="text_2";
+
+			document.getElementById("im2").style.display="none";
+			
+			if(document.getElementById("text_2").innerHTML!="0"){
+				document.getElementById("im").innerHTML="You Have won"+mo;
+			}else{
+				document.getElementById("im").innerHTML="Try Again";
+
+			}
+			document.getElementById("ba").style.zIndex="1";
+		}
+		function h3(){
+			ph="im3";
+			x22="text_3";
+
+			document.getElementById("im3").style.display="none";
+			
+			if(document.getElementById("text_3").innerHTML!="0"){
+				document.getElementById("im").innerHTML="You Have won"+mo;
+			}else{
+				document.getElementById("im").innerHTML="Try Again";
+
+			}
+			document.getElementById("ba").style.zIndex="1";
+		}
+		function h4(){
+			ph="im4";
+			x22="text_4";
+
+			document.getElementById("im4").style.display="none";
+			
+			if(document.getElementById("text_4").innerHTML!="0"){
+				document.getElementById("im").innerHTML="You Have won"+mo;
+			}else{
+				document.getElementById("im").innerHTML="Try Again";
+
+			}
+			document.getElementById("ba").style.zIndex="1";
+		}
+		function h5(){
+			ph="im5";
+			x22="text_5";
+
+			document.getElementById("im5").style.display="none";
+			
+			if(document.getElementById("text_5").innerHTML!="0"){
+				document.getElementById("im").innerHTML="You Have won"+mo;
+			}else{
+				document.getElementById("im").innerHTML="Try Again";
+
+			}
+			document.getElementById("ba").style.zIndex="1";
+
+		}
+		function h6(){
+			ph="im6";
+			x22="text_6";
+
+			document.getElementById("im6").style.display="none";
+			
+			if(document.getElementById("text_6").innerHTML!="0"){
+				document.getElementById("im").innerHTML="You Have won"+mo;
+			}else{
+				document.getElementById("im").innerHTML="Try Again";
+
+			}
+			document.getElementById("ba").style.zIndex="1";
+		}
+		function h7(){
+			ph="im7";
+			x22="text_7";
+
+			document.getElementById("im7").style.display="none";
+			
+			if(document.getElementById("text_7").innerHTML!="0"){
+				document.getElementById("im").innerHTML="You Have won"+mo;
+			}else{
+				document.getElementById("im").innerHTML="Try Again";
+
+			}
+			document.getElementById("ba").style.zIndex="1";
+		}
+		function h8(){
+			ph="im8";
+			x22="text_8";
+
+			document.getElementById("im8").style.display="none";
+			
+			if(document.getElementById("text_8").innerHTML!="0"){
+				document.getElementById("im").innerHTML="You Have won"+mo;
+			}else{ 
+				document.getElementById("im").innerHTML="Try Again";
+
+			}
+			document.getElementById("ba").style.zIndex="1";
+		}
+		function h9(){
+			ph="im9";
+			x22="text_9";
+
+			document.getElementById("im9").style.display="none";
+			
+			if(document.getElementById("text_9").innerHTML!="0"){
+				document.getElementById("im").innerHTML="You Have won"+mo;
+			}else{
+				document.getElementById("im").innerHTML="Try Again";
+
+			}
+			document.getElementById("ba").style.zIndex="1";
+		}
+
+
+
+		
+
+
+	</script>
+</body>
+</html>
